@@ -3,131 +3,226 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Eirionyx Case Study Grid</title>
+<title>Eirionyx Case Studies</title>
 
 <style>
-body {
-  margin: 0;
-  padding: 40px;
-  font-family: "Inter", sans-serif;
-  background: #ffffff;
-  color: #111;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #0a0a0a;
+    }
 
-#case-study-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    /* --- SECTION WRAPPER --- */
+    .section-wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 140px 40px 120px;
+    }
 
-.grid-header h5 {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  color: #555;
-}
+    /* --- HEADERS --- */
+    .eyebrow {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #111;
+        margin-bottom: 18px;
+    }
 
-.grid-header h2 {
-  font-size: 36px;
-  margin: 0 0 20px 0;
-  font-weight: 600;
-}
+    h2 {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0 0 24px;
+        color: #000;
+        line-height: 1.15;
+    }
 
-.grid-header p {
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #444;
-}
+    .subheader {
+        font-size: 20px;
+        font-weight: 600;
+        color: #222;
+        max-width: 720px;
+        line-height: 1.55;
+        margin-bottom: 60px;
+    }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
+    /* --- GRID --- */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+    }
 
-.case-card {
-  border: 1px solid #e5e5e5;
-  padding: 24px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
+    @media (max-width: 1024px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-.case-card:hover {
-  border-color: #000;
-}
+    @media (max-width: 640px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
 
-.case-card h3 {
-  margin-top: 0;
-  font-size: 22px;
-  font-weight: 600;
-}
+    /* --- CARD --- */
+    .card {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 36px;
+        background: #fff;
+        transition: all 0.25s ease;
+        transform: translateY(0);
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+    }
 
-.case-card p {
-  margin: 10px 0;
-  color: #444;
-}
+    .card:hover {
+        transform: scale(1.02);
+        border-color: #0a3d2e;
+        background: #f8fdfb;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
 
-.btn-outline {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 16px;
-  border: 1px solid #000;
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-.btn-outline:hover {
-  background: #000;
-  color: #fff;
-}
+    .card-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 16px;
+        line-height: 1.3;
+    }
+
+    .card-desc {
+        font-size: 19px;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.55;
+        margin-bottom: 28px;
+    }
+
+    .meta {
+        font-size: 16px;
+        font-weight: 600;
+        color: #111;
+        margin-bottom: 6px;
+    }
+
+    .meta span {
+        font-weight: 700;
+        color: #000;
+    }
+
+    /* --- BUTTON --- */
+    .btn {
+        display: inline-block;
+        margin-top: 26px;
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        border: 1.5px solid #0a6f4a; /* Emerald */
+        color: #0a6f4a;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+        background: #0a6f4a;
+        color: #fff;
+        border-color: #d4af37; /* Gold accent */
+        box-shadow: 0 0 0 2px rgba(212,175,55,0.25);
+        transform: scale(1.03);
+    }
 </style>
-</head>
 
+</head>
 <body>
 
-<div id="case-study-grid">
-  <div class="grid-header">
-    <h5>SELECTED CASE STUDIES</h5>
+<div class="section-wrapper">
+
+    <div class="eyebrow">Selected Case Studies</div>
     <h2>Leverage in Practice.</h2>
-    <p>A cross‑section of how foresight and operational clarity translate into measurable results — across independent networks and specialty groups.</p>
-  </div>
-
-  <div class="grid-container">
-    <div class="case-card">
-      <h3>Independent Surgical Network</h3>
-      <p class="summary">Vendor consolidation and spend optimization across multi‑site surgical operations, restoring control over pricing and renewals.</p>
-      <p class="focus">Focus: Vendor consolidation & spend optimization</p>
-      <p class="outcome">Outcome: 27% cost reduction, 2× faster procurement cycle</p>
-      <a href="#" class="btn-outline">View Full Case Study</a>
+    <div class="subheader">
+        Real examples of how foresight, leverage, and operational clarity create measurable transformation across independent networks and specialty groups.
     </div>
 
-    <div class="case-card">
-      <h3>Regional Imaging Group</h3>
-      <p class="summary">Workflow automation and data visibility across imaging centers, improving reporting speed and uptime.</p>
-      <p class="focus">Focus: Workflow automation & data visibility</p>
-      <p class="outcome">Outcome: 3× faster reporting, 98% uptime</p>
-      <a href="#" class="btn-outline">View Full Case Study</a>
-    </div>
+    <div class="grid">
 
-    <div class="case-card">
-      <h3>Multi‑Clinic Alliance</h3>
-      <p class="summary">Contract harmonization and partnership leverage across multiple clinics, creating unified vendor ecosystems.</p>
-      <p class="focus">Focus: Contract harmonization & partnership leverage</p>
-      <p class="outcome">Outcome: Unified vendor ecosystem, 15% margin lift</p>
-      <a href="#" class="btn-outline">View Full Case Study</a>
-    </div>
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-title">Independent Surgical Network</div>
+            <div class="card-desc">
+                Vendor consolidation and spend optimization across multi‑site surgical operations, restoring control over pricing and renewals.
+            </div>
+            <div class="meta"><span>Focus:</span> Vendor consolidation & spend optimization</div>
+            <div class="meta"><span>Outcome:</span> 27% cost reduction, 2× faster procurement cycle</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
 
-    <div class="case-card">
-      <h3>Outpatient Specialty Center</h3>
-      <p class="summary">Operational audit and strategic foresight for outpatient centers, enabling predictive renewal tracking and compliance alignment.</p>
-      <p class="focus">Focus: Operational audit & strategic foresight</p>
-      <p class="outcome">Outcome: Predictive renewal tracking, 100% compliance alignment</p>
-      <a href="#" class="btn-outline">View Full Case Study</a>
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-title">Regional Imaging Group</div>
+            <div class="card-desc">
+                Workflow automation and data visibility across imaging centers, improving reporting speed and uptime.
+            </div>
+            <div class="meta"><span>Focus:</span> Workflow automation & data visibility</div>
+            <div class="meta"><span>Outcome:</span> 3× faster reporting, 98% uptime</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-title">Multi‑Clinic Alliance</div>
+            <div class="card-desc">
+                Contract harmonization and partnership leverage across multiple clinics, creating unified vendor ecosystems.
+            </div>
+            <div class="meta"><span>Focus:</span> Contract harmonization & partnership leverage</div>
+            <div class="meta"><span>Outcome:</span> Unified vendor ecosystem, 15% margin lift</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <div class="card-title">Specialty Diagnostics Network</div>
+            <div class="card-desc">
+                Data unification and automated reporting pipelines across diagnostic centers, enabling real‑time analytics.
+            </div>
+            <div class="meta"><span>Focus:</span> Data unification & reporting automation</div>
+            <div class="meta"><span>Outcome:</span> 4× faster analytics, 99% data accuracy</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <div class="card-title">Ambulatory Care Group</div>
+            <div class="card-desc">
+                Modernized contract lifecycle management across multi‑clinic operations, restoring visibility and leverage.
+            </div>
+            <div class="meta"><span>Focus:</span> Contract lifecycle modernization</div>
+            <div class="meta"><span>Outcome:</span> 22% cost recovery, 100% renewal visibility</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card">
+            <div class="card-title">Advanced Outpatient Network</div>
+            <div class="card-desc">
+                Integrated vendor ecosystem redesign, improving operational throughput and reducing administrative load.
+            </div>
+            <div class="meta"><span>Focus:</span> Vendor ecosystem redesign</div>
+            <div class="meta"><span>Outcome:</span> 18% throughput lift, 30% admin reduction</div>
+            <a class="btn" href="#">View Full Case Study</a>
+        </div>
+
     </div>
-  </div>
 </div>
 
 </body>
