@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eirionyx Case Study Grid</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+#case-study-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-header h5 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.grid-header h2 {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.grid-header p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.case-card {
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.case-card:hover {
+  border-color: #000;
+}
+
+.case-card h3 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.case-card p {
+  margin: 10px 0;
+  color: #444;
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<div id="case-study-grid">
+  <div class="grid-header">
+    <h5>SELECTED CASE STUDIES</h5>
+    <h2>Leverage in Practice.</h2>
+    <p>A cross‑section of how foresight and operational clarity translate into measurable results — across independent networks and specialty groups.</p>
+  </div>
+
+  <div class="grid-container">
+    <div class="case-card">
+      <h3>Independent Surgical Network</h3>
+      <p class="summary">Vendor consolidation and spend optimization across multi‑site surgical operations, restoring control over pricing and renewals.</p>
+      <p class="focus">Focus: Vendor consolidation & spend optimization</p>
+      <p class="outcome">Outcome: 27% cost reduction, 2× faster procurement cycle</p>
+      <a href="#" class="btn-outline">View Full Case Study</a>
+    </div>
+
+    <div class="case-card">
+      <h3>Regional Imaging Group</h3>
+      <p class="summary">Workflow automation and data visibility across imaging centers, improving reporting speed and uptime.</p>
+      <p class="focus">Focus: Workflow automation & data visibility</p>
+      <p class="outcome">Outcome: 3× faster reporting, 98% uptime</p>
+      <a href="#" class="btn-outline">View Full Case Study</a>
+    </div>
+
+    <div class="case-card">
+      <h3>Multi‑Clinic Alliance</h3>
+      <p class="summary">Contract harmonization and partnership leverage across multiple clinics, creating unified vendor ecosystems.</p>
+      <p class="focus">Focus: Contract harmonization & partnership leverage</p>
+      <p class="outcome">Outcome: Unified vendor ecosystem, 15% margin lift</p>
+      <a href="#" class="btn-outline">View Full Case Study</a>
+    </div>
+
+    <div class="case-card">
+      <h3>Outpatient Specialty Center</h3>
+      <p class="summary">Operational audit and strategic foresight for outpatient centers, enabling predictive renewal tracking and compliance alignment.</p>
+      <p class="focus">Focus: Operational audit & strategic foresight</p>
+      <p class="outcome">Outcome: Predictive renewal tracking, 100% compliance alignment</p>
+      <a href="#" class="btn-outline">View Full Case Study</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
